@@ -1,3 +1,9 @@
+# Export photos from Photos Library in both way
+# 1. export unmodified into a "original" folder
+# 2. export in jpeg into a "exported" folder
+# 3. put this script on the same level as the two folders
+# 4. open terminal and navigate to the script and run "python Rename.py"
+
 import os.path, time
 from datetime import datetime
 
