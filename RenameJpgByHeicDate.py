@@ -70,6 +70,7 @@ for f in files_exported:
     if filename in dictFileToDate:
         newfilename = dictFileToDate[filename] + "_" + f
         print(f + " -> " + newfilename)
-        os.rename("exported/"+f, "exported/"+newfilename)
+        if os.path.isfile("exported/"+f):
+            os.rename("exported/"+f, "exported/"+newfilename)
     else:
         print("!!!!!FFFFFile not found from original dictFileToDate" + filename)
