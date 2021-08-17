@@ -24,6 +24,10 @@ for r, d, f in os.walk(path+"/original"):
             files.append(file)
         if '.jpeg' in file:
             files.append(file)
+        if '.JPG' in file:
+            files.append(file)
+        if '.jpg' in file:
+            files.append(file)
         if '.PNG' in file:
             files.append(file)
         if '.png' in file:
@@ -45,6 +49,10 @@ for r, d, f in os.walk(path+"/exported"):
             files_exported.append(file)
         if '.jpeg' in file:
             files_exported.append(file)
+        if '.JPG' in file:
+            files.append(file)
+        if '.jpg' in file:
+            files.append(file)
         if '.PNG' in file:
             files_exported.append(file)
         if '.png' in file:
@@ -73,4 +81,4 @@ for f in files_exported:
         if os.path.isfile("exported/"+f):
             os.rename("exported/"+f, "exported/"+newfilename)
     else:
-        print("!!!!!FFFFFile not found from original dictFileToDate" + filename)
+        print("!!!!!FFFFFile not found from original dictFileToDate: " + filename)
